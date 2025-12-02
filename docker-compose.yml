@@ -1,0 +1,15 @@
+services:
+  weather_bot:
+    build: .
+    container_name: weather_bot
+    restart: always
+    volumes:
+      - ./logs:/app/logs
+      - ./.env:/app/.env:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

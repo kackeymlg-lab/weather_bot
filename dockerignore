@@ -1,0 +1,12 @@
+.git
+.gitignore
+.env.local
+*.pyc
+__pycache__/
+.pytest_cache/
+.venv
+venv
+logs/
+*.log
+.DS_Store
+*.md
